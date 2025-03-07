@@ -8,13 +8,14 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {
-        "start": "yarn format && yarn lint && yarn type-check && vite",
+        "start": "vite",
         "build": "vite build",
         "image": "cross-conf-env docker build -t $npm_package_name:$npm_package_version -f deploy/Dockerfile .",
         "preview": "vite preview --host",
         "format": "prettier --write . --config ./.prettierrc.json",
         "lint": "eslint  ./src --fix --flag unstable_ts_config",
-        "type-check": "vue-tsc --noEmit --composite false"
+        "type-check": "vue-tsc --noEmit --composite false",
+        "prrstart": "yarn format && yarn lint && yarn type-check && "
     },
     "husky": {
         "hooks": {
@@ -38,7 +39,6 @@
         "@stomp/stompjs": "7.0.0",
         "@vueuse/core": "11.3.0",
         "axios": "1.7.7",
-        "cesium": "1.123.1",
         "crypto-js": "4.2.0",
         "element-plus": "2.8.8",
         "follow-redirects": "1.15.9",
@@ -51,33 +51,22 @@
         "vue-router": "4.4.5"
     },
     "devDependencies": {
-        "@eslint/js": "9.15.0",
         "@tsconfig/node20": "20.1.4",
         "@types/crypto-js": "4.2.2",
         "@types/node": "20.17.7",
         "@types/vkbeautify": "0.99.4",
-        "@vitejs/plugin-vue": "5.2.0",
-        "@vitejs/plugin-vue-jsx": "4.1.0",
+        "@vitejs/plugin-vue": "5.2.1",
         "@vue/runtime-core": "3.5.13",
         "@vue/tsconfig": "0.6.0",
         "cross-conf-env": "1.3.0",
-        "eslint": "9.15.0",
-        "eslint-config-prettier": "9.1.0",
-        "eslint-plugin-prettier": "5.2.1",
-        "eslint-plugin-unicorn": "56.0.1",
-        "eslint-plugin-vue": "9.31.0",
         "globals": "15.12.0",
         "husky": "9.1.7",
         "jiti": "2.4.0",
         "lint-staged": "15.2.10",
-        "msw": "2.6.8",
         "npm-run-all2": "7.0.1",
-        "prettier": "3.4.1",
         "typescript": "5.6.2",
-        "typescript-eslint": "8.16.0",
         "vite": "6.0.9",
-        "vite-plugin-cesium": "1.2.23",
-        "vite-plugin-vue-devtools": "7.6.4",
+        "vite-plugin-vue-devtools": "7.7.2",
         "vue-tsc": "2.1.10"
     },
     "browserslist": [
@@ -87,11 +76,6 @@
     ],
     "volta": {
         "node": "20.16.0",
-        "yarn": "4.4.0"
-    },
-    "msw": {
-        "workerDirectory": [
-            "public"
-        ]
+        "yarn": "1.22.22"
     }
 }

@@ -4,8 +4,8 @@ import { createStore } from "@/plugin/store";
 // 路由
 import router from "@/plugin/router";
 // element自定义的样式文件
-import "@/plugin/element/index.scss";
-// import "element-plus/dist/index.css";
+// import "@/plugin/element/index.scss";
+import "element-plus/dist/index.css";
 // element全局指令
 import ElementPlus from "element-plus";
 
